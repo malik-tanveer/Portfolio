@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 function PortfolioBg({ bgMode }) {
-  const ref    = useRef(null);
+  const ref = useRef(null);
   const modeRef = useRef(bgMode);
   modeRef.current = bgMode;
 
@@ -28,7 +28,7 @@ function PortfolioBg({ bgMode }) {
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    const scene  = new THREE.Scene();
+    const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
     camera.position.z = 9;
 
@@ -64,28 +64,28 @@ function PortfolioBg({ bgMode }) {
     scene.add(grid);
 
     const mkBlob = (color, op, x, y, z, r = 5.5) => {
-      const mat  = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: op, depthWrite: false });
+      const mat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: op, depthWrite: false });
       const mesh = new THREE.Mesh(new THREE.CircleGeometry(r, 48), mat);
       mesh.position.set(x, y, z);
       scene.add(mesh);
       return mesh;
     };
-    const lBlob  = mkBlob(0x3b82f6, 0.07, -11,  1, -2);
-    const rBlob  = mkBlob(0x001f5c, 0.09,  11, -1, -2);
-    const lInner = mkBlob(0x60a5fa, 0.10, -11,  1, -1.5, 2.2);
-    const rInner = mkBlob(0x001f5c, 0.13,  11, -1, -1.5, 2.2);
+    const lBlob = mkBlob(0x3b82f6, 0.07, -11, 1, -2);
+    const rBlob = mkBlob(0x001f5c, 0.09, 11, -1, -2);
+    const lInner = mkBlob(0x60a5fa, 0.10, -11, 1, -1.5, 2.2);
+    const rInner = mkBlob(0x001f5c, 0.13, 11, -1, -1.5, 2.2);
 
     const BUBBLE_DATA = [
-      { x: -8, y:  3, r: 0.18, c: 0x3b82f6, op: 0.22 },
+      { x: -8, y: 3, r: 0.18, c: 0x3b82f6, op: 0.22 },
       { x: -6, y: -2, r: 0.12, c: 0x001f5c, op: 0.28 },
       { x: -9, y: -1, r: 0.22, c: 0x60a5fa, op: 0.18 },
-      { x:  7, y:  2, r: 0.15, c: 0x001f5c, op: 0.24 },
-      { x:  9, y: -2, r: 0.20, c: 0x3b82f6, op: 0.20 },
-      { x:  6, y:  3, r: 0.10, c: 0x001f5c, op: 0.30 },
-      { x: -4, y:  4, r: 0.08, c: 0x3b82f6, op: 0.25 },
-      { x:  4, y: -3, r: 0.14, c: 0x60a5fa, op: 0.22 },
-      { x: -7, y:  1, r: 0.09, c: 0x001f5c, op: 0.20 },
-      { x:  8, y:  1, r: 0.11, c: 0x3b82f6, op: 0.18 },
+      { x: 7, y: 2, r: 0.15, c: 0x001f5c, op: 0.24 },
+      { x: 9, y: -2, r: 0.20, c: 0x3b82f6, op: 0.20 },
+      { x: 6, y: 3, r: 0.10, c: 0x001f5c, op: 0.30 },
+      { x: -4, y: 4, r: 0.08, c: 0x3b82f6, op: 0.25 },
+      { x: 4, y: -3, r: 0.14, c: 0x60a5fa, op: 0.22 },
+      { x: -7, y: 1, r: 0.09, c: 0x001f5c, op: 0.20 },
+      { x: 8, y: 1, r: 0.11, c: 0x3b82f6, op: 0.18 },
     ];
     const bubbles = BUBBLE_DATA.map(({ x, y, r, c, op }) => {
       const mesh = new THREE.Mesh(
@@ -98,20 +98,20 @@ function PortfolioBg({ bgMode }) {
     });
 
     const COUNT = 120;
-    const pPos  = new Float32Array(COUNT * 3);
-    const pCol  = new Float32Array(COUNT * 3);
-    const PCOLS = [[0, 31/255, 92/255], [59/255, 130/255, 246/255], [0.08, 0.08, 0.12]];
+    const pPos = new Float32Array(COUNT * 3);
+    const pCol = new Float32Array(COUNT * 3);
+    const PCOLS = [[0, 31 / 255, 92 / 255], [59 / 255, 130 / 255, 246 / 255], [0.08, 0.08, 0.12]];
 
     for (let i = 0; i < COUNT; i++) {
-      pPos[i*3]   = (Math.random() - 0.5) * 36;
-      pPos[i*3+1] = (Math.random() - 0.5) * 20;
-      pPos[i*3+2] = (Math.random() - 0.5) * 6 - 2;
+      pPos[i * 3] = (Math.random() - 0.5) * 36;
+      pPos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+      pPos[i * 3 + 2] = (Math.random() - 0.5) * 6 - 2;
       const c = PCOLS[Math.floor(Math.random() * 3)];
-      pCol[i*3] = c[0]; pCol[i*3+1] = c[1]; pCol[i*3+2] = c[2];
+      pCol[i * 3] = c[0]; pCol[i * 3 + 1] = c[1]; pCol[i * 3 + 2] = c[2];
     }
     const pGeo = new THREE.BufferGeometry();
     pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
-    pGeo.setAttribute("color",    new THREE.BufferAttribute(pCol, 3));
+    pGeo.setAttribute("color", new THREE.BufferAttribute(pCol, 3));
     const pts = new THREE.Points(pGeo,
       new THREE.PointsMaterial({ size: 0.06, vertexColors: true, transparent: true, opacity: 0.5 })
     );
@@ -119,7 +119,7 @@ function PortfolioBg({ bgMode }) {
 
     let mx = 0, my = 0;
     const onMouse = (e) => {
-      mx = (e.clientX / window.innerWidth  - 0.5) * 2;
+      mx = (e.clientX / window.innerWidth - 0.5) * 2;
       my = (e.clientY / window.innerHeight - 0.5) * 2;
     };
     window.addEventListener("mousemove", onMouse);
@@ -127,9 +127,9 @@ function PortfolioBg({ bgMode }) {
     // BG mode colors
     const BG_COLORS = {
       light: new THREE.Color(0xfafafa),
-      warm:  new THREE.Color(0xfdf6ee),
-      cool:  new THREE.Color(0xeef3fd),
-      dark:  new THREE.Color(0x0d1117),
+      warm: new THREE.Color(0xfdf6ee),
+      cool: new THREE.Color(0xeef3fd),
+      dark: new THREE.Color(0x0d1117),
     };
 
     let raf;
@@ -143,13 +143,13 @@ function PortfolioBg({ bgMode }) {
       const target = BG_COLORS[modeRef.current] ?? BG_COLORS.light;
       scene.background.lerp(target, 0.04);
 
-      pts.rotation.z  = t * 0.012;
-      pts.position.x  = Math.sin(t * 0.15) * 0.3;
-      grid.rotation.z = Math.sin(t * 0.2)  * 0.004;
+      pts.rotation.z = t * 0.012;
+      pts.position.x = Math.sin(t * 0.15) * 0.3;
+      grid.rotation.z = Math.sin(t * 0.2) * 0.004;
 
-      lBlob.material.opacity  = lInner.material.opacity  = 0.07 + Math.sin(t * 0.8)  * 0.025;
-      rBlob.material.opacity  = rInner.material.opacity  = 0.09 + Math.sin(t * 0.65) * 0.028;
-      lBlob.position.y = lInner.position.y =  1 + Math.sin(t * 0.5)  * 0.8;
+      lBlob.material.opacity = lInner.material.opacity = 0.07 + Math.sin(t * 0.8) * 0.025;
+      rBlob.material.opacity = rInner.material.opacity = 0.09 + Math.sin(t * 0.65) * 0.028;
+      lBlob.position.y = lInner.position.y = 1 + Math.sin(t * 0.5) * 0.8;
       rBlob.position.y = rInner.position.y = -1 + Math.cos(t * 0.45) * 0.8;
 
       bubbles.forEach(({ mesh, ox, oy, spd, ph }) => {
@@ -176,9 +176,9 @@ function PortfolioBg({ bgMode }) {
 }
 
 function Loader({ onDone }) {
-  const loaderRef  = useRef(null);
-  const lineRef    = useRef(null);
-  const textRef    = useRef(null);
+  const loaderRef = useRef(null);
+  const lineRef = useRef(null);
+  const textRef = useRef(null);
   const counterRef = useRef(null);
 
   useEffect(() => {
@@ -226,9 +226,9 @@ function Loader({ onDone }) {
 }
 
 function PortfolioPage() {
-  const [loading,   setLoading]   = useState(true);
+  const [loading, setLoading] = useState(true);
   const mainRef = useRef(null);
-  const navRef  = useRef(null);
+  const navRef = useRef(null);
 
   const handleLoaderDone = useCallback(() => {
     setLoading(false);
@@ -246,7 +246,7 @@ function PortfolioPage() {
       );
     });
   }, []);
-``
+  ``
   // ScrollTrigger — each section animates in on scroll
   useEffect(() => {
     if (loading) return;
@@ -270,7 +270,7 @@ function PortfolioPage() {
 
       {!loading && (
         <>
-<PortfolioBg bgMode="light" /> 
+          <PortfolioBg bgMode="light" />
           <div ref={navRef} className="relative" style={{ zIndex: 50, opacity: 0 }}>
             <Navbar />
           </div>
@@ -284,8 +284,8 @@ function PortfolioPage() {
             <section id="whyhireme">  <Hire_me />    </section>
             <section id="contact">    <Contact />    </section>
           </main>
-          
-   <div className="relative" style={{ zIndex: 10 }}>
+
+          <div className="relative" style={{ zIndex: 10 }}>
             <Footer />
           </div>
         </>
@@ -302,10 +302,10 @@ function ResumeRedirect() {
 export default function App() {
   return (
     <Routes>
-      <Route path="/"          element={<Gateway />}        />
-      <Route path="/portfolio" element={<PortfolioPage />}  />
-      <Route path="/resume"    element={<ResumeRedirect />} />
-      <Route path="*"          element={<Navigate to="/" replace />} />
+      <Route path="/" element={<Gateway />} />
+      <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/resume" element={<ResumeRedirect />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

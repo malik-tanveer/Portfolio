@@ -425,13 +425,6 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-
-        {/* ── Tech tag below pill — subtle dev flavour ─────────────── */}
-        <div className="hidden lg:flex justify-center mt-1.5">
-          <span className="font-mono text-[10px] text-[#001f5c]/30 tracking-widest select-none">
-            // full-stack developer
-          </span>
-        </div>
       </nav>
 
       {/* ── Overlay ────────────────────────────────────────────────────── */}

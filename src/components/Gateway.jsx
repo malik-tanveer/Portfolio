@@ -5,7 +5,6 @@ import * as THREE from "three";
 
 const RESUME_URL = "/resume.pdf";
 
-// ─── Typing hook ──────────────────────────────────────────────────────────────
 function useTyping(text, delay = 1.2) {
   const [out, setOut] = useState("");
   useEffect(() => {
@@ -22,7 +21,6 @@ function useTyping(text, delay = 1.2) {
   return out;
 }
 
-// ─── Three.js background (fixed, full screen) ─────────────────────────────────
 function ThreeScene() {
   const ref = useRef(null);
 
@@ -47,7 +45,6 @@ function ThreeScene() {
     resize();
     window.addEventListener("resize", resize);
 
-    // ── Grid ──────────────────────────────────────────────────────────────
     const grid = new THREE.Group();
     grid.position.z = -4;
     const HALF = 20, STEP = 2.2;
@@ -69,7 +66,6 @@ function ThreeScene() {
     }
     scene.add(grid);
 
-    // ── Side glow blobs ───────────────────────────────────────────────────
     const mkBlob = (color, op, x, y, z, r = 5.5) => {
       const m = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: op, depthWrite: false });
       const mesh = new THREE.Mesh(new THREE.CircleGeometry(r, 48), m);
@@ -83,7 +79,6 @@ function ThreeScene() {
     const lInner = mkBlob(0x60a5fa, 0.10, -11, 1, -1.5, 2.2);
     const rInner = mkBlob(0x001f5c, 0.13, 11, -1, -1.5, 2.2);
 
-    // ── Particles ─────────────────────────────────────────────────────────
     const COUNT = 120;
     const pos = new Float32Array(COUNT * 3);
     const col = new Float32Array(COUNT * 3);
@@ -105,7 +100,6 @@ function ThreeScene() {
     const pts = new THREE.Points(geo, new THREE.PointsMaterial({ size: 0.06, vertexColors: true, transparent: true, opacity: 0.5 }));
     scene.add(pts);
 
-    // ── Mouse parallax ────────────────────────────────────────────────────
     let mx = 0, my = 0;
     const onMouse = (e) => {
       mx = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -147,7 +141,6 @@ function ThreeScene() {
   return <canvas ref={ref} className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }} />;
 }
 
-// ─── 3D Tilt card ─────────────────────────────────────────────────────────────
 function TiltCard({ children, className, onClick, href }) {
   const ref = useRef(null);
 
@@ -166,7 +159,6 @@ function TiltCard({ children, className, onClick, href }) {
     : <button onClick={onClick} {...props}>{children}</button>;
 }
 
-// ─── Gateway ──────────────────────────────────────────────────────────────────
 export default function Gateway() {
   const navigate = useNavigate();
   const wrapRef = useRef(null);
@@ -237,7 +229,7 @@ export default function Gateway() {
             Malik Tanveer
           </h1>
    <p ref={aboutRef} className="f-dm text-[#0a0f2c]/52 text-sm leading-relaxed mb-6 max-w-md">
-            A MERN Stack Developer who builds fast, scalable web apps — from clean React frontends to solid Node.js backends, with Firebase, REST APIs, and modern UI in between.
+            A MERN Stack Developer who builds fast, scalable web apps  from clean React frontends to solid Node.js backends, with Firebase, REST APIs, and modern UI in between.
           </p>
           {/* Typing role */}
           <p ref={roleRef} className="f-mono text-[#001f5c]/52 mb-10 cursor"
