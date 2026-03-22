@@ -5,15 +5,69 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
-{
-  title: "VidSnap",
-desc: "A full-stack video downloader that lets users download videos from YouTube, Instagram, and Facebook by pasting a URL, built with Vue.js, Vuetify, and Express.js using yt-dlp.",
-  tags: ["Vue.js", "Vuetify", "Express.js", "yt-dlp"],
-  img: "/yt-project.png",
-  color: "#3b82f6",
-  github: "https://github.com/malik-tanveer/yt-downloader",
-  live: "#",
-},
+  {
+    title: "Apartment Website",
+    desc: "A modern luxury apartment website showcasing floor plans, amenities, and booking features with smooth animations.",
+    tags: ["React", "Tailwind", "AOS", "EmailJS"],
+    img: "/apartment-project.png",
+    color: "#0ea5e9",
+    github: "https://github.com/malik-tanveer/Apartment-Website",
+    live: "#", // placeholder
+  },
+  {
+    title: "EventFlow",
+    desc: "Manage and share your events with authentication, RSVP, and real-time updates. Built with React, TypeScript, Supabase, and Tailwind CSS.",
+    tags: ["React", "TypeScript", "Tailwind", "Supabase", "Authentication"],
+    img: "/event-project.png",
+    color: "#f43f5e",
+    github: "https://github.com/malik-tanveer/event-spark-80",
+    live: "https://event-spark-80.lovable.app",
+  },
+  {
+    title: "Expense Tracker",
+    desc: "Track expenses, manage budgets, and visualize spending with a clean and modern interface.",
+    tags: ["React", "TypeScript", "Tailwind", "Firebase", "Firestore", "Chart.js"],
+    img: "/expense-project.png",
+    color: "#14b8a6",
+    github: "https://github.com/malik-tanveer/Expense-tracker-app",
+    live: "https://expense-tracker-b28ca.web.app/",
+  },
+  {
+    title: "Freelance Manager",
+    desc: "Manage your projects, clients, and payments efficiently with a clean dashboard interface.",
+    tags: ["React", "TypeScript", "Tailwind", "Firebase", "Firestore"],
+    img: "/freelance-project.png",
+    color: "#f59e0b",
+    github: "https://github.com/malik-tanveer/Freelance_Project_Manager/",
+    live: "https://freelance-project-manage-c1.web.app/",
+  },
+  {
+    title: "MT Quran",
+    desc: "A modern Quran web app to read Surahs, explore Paras, and check daily prayer times using a reliable Quran API. Built with React, TypeScript, and Tailwind CSS.",
+    tags: ["React", "TypeScript", "Tailwind", "Quran API"],
+    img: "/mt-quran.png",
+    color: "#6366f1",
+    github: "https://github.com/malik-tanveer/Web-Ramdan",
+    live: "https://web-ramdan.vercel.app/",
+  },
+  {
+    title: "Movie App",
+    desc: "A modern movie discovery app to search and explore movies and dramas using the TMDB API. Built with React, TypeScript, and Tailwind CSS for a smooth experience.",
+    tags: ["React", "TypeScript", "Tailwind", "TMDB API"],
+    img: "/movie-project.png",
+    color: "#ef4444",
+    github: "https://github.com/malik-tanveer/Movie",
+    live: "https://movie-six-sand.vercel.app/",
+  },
+  {
+    title: "VidSnap",
+    desc: "A full-stack video downloader that lets users download videos from YouTube, Instagram, and Facebook by pasting a URL, built with Vue.js, Vuetify, and Express.js using yt-dlp.",
+    tags: ["Vue.js", "Vuetify", "Express.js", "yt-dlp"],
+    img: "/yt-project.png",
+    color: "#3b82f6",
+    github: "https://github.com/malik-tanveer/yt-downloader",
+    live: "#",
+  },
   {
     title: "MT-Mart",
     desc: "Full-stack ecommerce platform with product listings, cart, and Supabase backend. Clean React frontend with Tailwind CSS.",
@@ -42,17 +96,26 @@ desc: "A full-stack video downloader that lets users download videos from YouTub
     live: "https://weather-app-aykays.vercel.app/",
   },
   {
-  title: "Expense Tracker",
-  desc: "A modern personal finance tracker that helps users manage daily expenses with ease. Features include category-based tracking, monthly budget management, real-time summaries, and interactive charts for better financial insights. Built with React, TypeScript, Firebase, and Tailwind CSS.",
-  tags: ["React", "TypeScript", "Tailwind", "Firebase", "Firestore", "Chart.js"],
-  img: "/expense-project.png",
-  color: "#14b8a6",
-  github: "https://github.com/malik-tanveer/Expense-tracker-app",
-  live: "https://expense-tracker-b28ca.web.app/",
-}
+    title: "Trading Coins App",
+    desc: "A crypto dashboard to track coin prices, market trends, and real-time data using the CoinGecko API.",
+    tags: ["React", "TypeScript", "Tailwind", "CoinGecko API"],
+    img: "#",
+    color: "#22c55e",
+    github: "https://github.com/malik-tanveer/CryptoView",
+    live: "https://crypto-view-ruddy.vercel.app/",
+  },
+  {
+    title: "FutureStack",
+    desc: "A free project-based learning platform for full-stack development, DSA, and Python automation. Learn through hands-on projects with React, TypeScript, Tailwind, and Express.js.",
+    tags: ["React", "TypeScript", "Tailwind", "Express.js", "YouTube API"],
+    img: "#",
+    color: "#facc15",
+    github: "https://github.com/malik-tanveer/MERN_Stack_Project",
+    live: "https://mern-stack-project-mu-three.vercel.app/",
+  }
 ];
 
-const INITIAL_SHOW = 3;
+const INITIAL_SHOW = 6;
 
 function ProjectCard({ project, index, visible }) {
   const cardRef    = useRef(null);
@@ -126,13 +189,12 @@ function ProjectCard({ project, index, visible }) {
           </div>
         </div>
 
-        <span className="pj-year">{project.year}</span>
       </div>
 
       {/* Footer */}
       <div className="pj-footer">
         <div className="pj-info">
-          <span className="pj-num" style={{ color: `${project.color}70` }}>0{project.id}</span>
+          {/* <span className="pj-num" style={{ color: `${project.color}70` }}>0{project.id}</span> */}
           <h3 className="pj-title">{project.title}</h3>
         </div>
 
@@ -302,7 +364,7 @@ export default function Projects() {
             style={{ fontFamily: "monospace", border: "1px solid rgba(0,31,92,0.13)", background: "rgba(0,31,92,0.03)", opacity: 0 }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />
-            <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">my work</span>
+            <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em]">MY WORK</span>
           </div>
 
           <h2
