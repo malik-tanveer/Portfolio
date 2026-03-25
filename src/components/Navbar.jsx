@@ -194,7 +194,7 @@ const LEFT_LINKS = [
 const RIGHT_LINKS = [
   { name: "Services",     id: "services"     },
   { name: "Hire Me",      id: "whyhireme"    },
-  { name: "Testimonials", id: "testimonials" },
+  { name: "Let’s Build", id: "Let’sBuild" },
   { name: "Contact",      id: "contact"      },
 ];
 

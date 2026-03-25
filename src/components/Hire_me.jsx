@@ -6,31 +6,11 @@ import { TrendingUp, ShieldCheck, Cpu, Rocket, Users, ArrowRight } from "lucide-
 gsap.registerPlugin(ScrollTrigger);
 
 const POINTS = [
-  {
-    icon: TrendingUp,
-    title: "Growth-focused work",
-    desc: "Every project I build is meant to grow — scalable code, clean architecture, room to expand.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Reliable from day one",
-    desc: "Two internships, real deadlines, real teams. I know how to work professionally and deliver.",
-  },
-  {
-    icon: Cpu,
-    title: "Frontend is my strength",
-    desc: "React, Next.js, animations, responsive UI — this is where I spend most of my time and it shows.",
-  },
-  {
-    icon: Rocket,
-    title: "Fast and efficient",
-    desc: "I don't overthink. I plan, build, and ship. Clean output, on time, every time.",
-  },
-  {
-    icon: Users,
-    title: "Easy to work with",
-    desc: "Clear communication, regular updates, open to feedback. No headaches, just results.",
-  },
+  { icon: TrendingUp, text: "1+ year of hands-on experience across internships and real projects." },
+  { icon: ShieldCheck, text: "Strong grasp of responsive design, UI/UX principles, and accessibility." },
+  { icon: Cpu,         text: "Expertise in building reusable, scalable component architecture." },
+  { icon: Rocket,      text: "Focused on performance — fast load times, clean output, smooth UX." },
+  { icon: Users,       text: "Collaborative, communicative, and reliable from kickoff to delivery." },
 ];
 
 export default function HireMe() {
@@ -41,21 +21,21 @@ export default function HireMe() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(imgRef.current,
-        { x: -60, opacity: 0 },
+        { x: -50, opacity: 0 },
         { x: 0, opacity: 1, duration: 1, ease: "power3.out",
           scrollTrigger: { trigger: secRef.current, start: "top 78%", toggleActions: "play none none none" } }
       );
       gsap.fromTo(rightRef.current,
-        { x: 60, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.12,
+        { x: 50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.15,
           scrollTrigger: { trigger: secRef.current, start: "top 78%", toggleActions: "play none none none" } }
       );
       gsap.fromTo(".hm-pt",
-        { y: 20, opacity: 0 },
+        { y: 16, opacity: 0 },
         { y: 0, opacity: 1, stagger: 0.08, duration: 0.5, ease: "power3.out", delay: 0.4,
           scrollTrigger: { trigger: rightRef.current, start: "top 82%", toggleActions: "play none none none" } }
       );
-      gsap.to(imgRef.current, { y: -7, duration: 3.2, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1 });
+      gsap.to(imgRef.current, { y: -7, duration: 3, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1 });
     }, secRef);
     return () => ctx.revert();
   }, []);
@@ -69,81 +49,61 @@ export default function HireMe() {
         <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">why hire me</span>
       </div>
 
-      <div className="flex items-stretch gap-16 max-lg:flex-col">
+      <div className="flex items-center gap-12 max-lg:flex-col">
 
-        {/* ── Left: Image ── */}
-        <div ref={imgRef} className="flex-shrink-0 flex flex-col gap-6 max-lg:items-center"
-          style={{ width: "min(300px, 36vw)", opacity: 0 }}>
-
-          {/* Photo — no border, just shadow + clip */}
-          <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl"
-            style={{ aspectRatio: "3/4" }}>
-            <img
-              src="/cc1.png"
-              alt="Malik Tanveer"
-              className="w-full h-full object-cover object-top block"
-            />
-            {/* subtle bottom fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-28"
-              style={{ background: "linear-gradient(to top, rgba(250,250,252,0.5), transparent)" }} />
-          </div>
-
-          {/* Quote below image */}
-          <div className="relative overflow-hidden">
-            <span className="absolute -top-4 -left-1 text-[6rem] leading-none font-serif text-[#001f5c]/8 select-none">"</span>
-            <p className="relative text-[13px] text-[#0a0f2c]/52 leading-[1.75] italic pl-1">
-              Great design isn't just how it looks — it's how it feels and performs.
-              I build digital experiences that leave a lasting impression.
-            </p>
-            <div className="flex items-center gap-2 mt-3 pl-1">
-              <div className="w-8 h-px bg-[#001f5c]/20" />
-              <span className="text-[10.5px] font-mono text-[#0a0f2c]/40">Malik Tanveer</span>
-            </div>
-          </div>
-
+        {/* ── Left: Photo ── */}
+        <div ref={imgRef} className="flex-shrink-0 max-lg:w-full flex justify-center" 
+  
+  style={{ width: "min(400px, 40vw)", height: "min(400px, 40vh)", opacity: 0 }}>
+          <img
+            src="/unnamed.jpg"
+            alt="Malik Tanveer"
+            className="w-full block object-contain select-none"
+            draggable={false}
+          />
         </div>
 
         {/* ── Right: Content ── */}
-        <div ref={rightRef} className="flex-1 flex flex-col justify-center" style={{ opacity: 0 }}>
+        <div ref={rightRef} className="flex-1" style={{ opacity: 0 }}>
 
-          <h2 className="text-[#0a0f2c] font-black leading-[1.05] mb-4"
-            style={{ fontFamily: "'Syne',sans-serif", fontSize: "clamp(2rem,4vw,3rem)", letterSpacing: "-.03em" }}>
-            The developer<br />
-            <span style={{ color: "#001f5c" }}>you actually need.</span>
+
+          <h2 className="text-[#0a0f2c] font-black leading-tight mb-4"
+            style={{ fontFamily: "'Syne',sans-serif", fontSize: "clamp(1.8rem,3.5vw,2.7rem)", letterSpacing: "-.025em" }}>
+            Code with Purpose.<br />
+            <span className="text-[#001f5c]">
+            Built for Impact.
+            </span>
           </h2>
 
-          <p className="text-[#0a0f2c]/46 text-[13.5px] leading-relaxed mb-8 max-w-[400px]">
-            Not just someone who writes code — someone who thinks about your product,
-            cares about the output, and knows how to get things done end-to-end.
+          <p className="text-[#0a0f2c]/52 text-[13.5px] leading-relaxed mb-7 max-w-[430px]">
+            I'm <strong className="text-[#0a0f2c]">Malik Tanveer</strong> — a frontend developer
+            who thinks like a full-stack engineer. I work with{" "}
+            <strong className="text-[#001f5c]">React, Next.js, Node.js, and Tailwind</strong> to
+            build products that look sharp and actually work. Every line I write is
+            intentional — no fluff, just results.
           </p>
 
           {/* Points */}
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-3 mb-8">
             {POINTS.map((p) => {
               const Icon = p.icon;
               return (
-                <div key={p.title}
-                  className="hm-pt flex items-start gap-4 p-4 rounded-xl bg-white border border-[#001f5c]/7 hover:border-[#001f5c]/18 hover:shadow-md transition-all duration-200">
-                  <div className="w-9 h-9 rounded-lg bg-[#001f5c]/6 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Icon size={16} strokeWidth={1.9} className="text-[#001f5c]" />
-                  </div>
-                  <div>
-                    <p className="text-[13px] font-semibold text-[#0a0f2c] mb-0.5">{p.title}</p>
-                    <p className="text-[12px] text-[#0a0f2c]/43 leading-relaxed">{p.desc}</p>
-                  </div>
+                <div key={p.text} className="hm-pt flex items-start gap-3">
+                  <Icon size={15} strokeWidth={2} className="text-[#001f5c] flex-shrink-0 mt-0.5" />
+                  <p className="text-[13px] text-[#0a0f2c]/55 leading-relaxed">{p.text}</p>
                 </div>
               );
             })}
           </div>
 
           {/* CTAs */}
-          <div className="flex items-center gap-3 flex-wrap mt-8">
+          <div className="flex items-center gap-3 flex-wrap">
             <a href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 no-underline">
-              Hire Me <ArrowRight size={14} />
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 no-underline">
+              Contact Me <ArrowRight size={13} />
             </a>
             <a href="/resume.pdf" target="_blank" rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[13px] font-medium text-[#001f5c] border border-[#001f5c]/15 hover:bg-[#001f5c]/5 hover:-translate-y-0.5 transition-all duration-200 no-underline">
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-medium text-[#001f5c] border-2 border-[#001f5c]/20 hover:bg-[#001f5c]/5 hover:-translate-y-0.5 transition-all duration-200 no-underline">
               View Resume
             </a>
           </div>

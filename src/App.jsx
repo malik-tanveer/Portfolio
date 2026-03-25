@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import IdeaCTA from "./components/IdeaCTA";
 import Hire_me from "./components/Hire_me";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -282,6 +283,8 @@ function PortfolioPage() {
             <section id="projects">   <Projects />   </section>
             <section id="experience"> <Experience /> </section>
             <section id="whyhireme">  <Hire_me />    </section>
+            <section id="Let’sBuild">  <IdeaCTA />    </section>
+ 
             <section id="contact">    <Contact />    </section>
           </main>
 
@@ -289,7 +292,7 @@ function PortfolioPage() {
             <Footer />
           </div>
         </>
-      )}
+      )}d
     </>
   );
 }
