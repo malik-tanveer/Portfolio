@@ -128,7 +128,7 @@ export default function Experience() {
           style={{ opacity: 0 }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />
-          <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">journey</span>
+          <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">my journey</span>
         </div>
 
         <h2

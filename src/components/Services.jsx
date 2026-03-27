@@ -115,58 +115,101 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={secRef} className="w-full px-5 py-4 max-w-[1100px] mx-auto">
+    <section ref={secRef} className="w-full px-5 py-8 md:py-12 max-w-[1100px] mx-auto">
 
-      {/* Heading */}
-      <div className="mb-12 flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <div ref={pillRef} className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full border border-[#001f5c]/13 bg-[#001f5c]/3 font-mono" style={{ opacity: 0 }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />
-            <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">what I do</span>
-          </div>
-          <h2 ref={titleRef} className="text-[#0a0f2c] font-black leading-none"
-            style={{ fontFamily: "'Syne',sans-serif", fontSize: "clamp(1.9rem,4vw,2.8rem)", letterSpacing: "-.025em", opacity: 0 }}>
-            Services
-          </h2>
-          <p ref={subRef} className="text-[#0a0f2c]/42 text-[13px] mt-2.5 max-w-sm" style={{ opacity: 0 }}>
-            From idea to deployed product — I handle the full stack.
-          </p>
-        </div>
+  {/* Heading */}
+  <div className="mb-10 md:mb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
 
-        <a href="#contact"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 no-underline">
-          Let's Work Together <ArrowRight size={13} />
-        </a>
+    <div>
+      <div
+        ref={pillRef}
+        className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full border border-[#001f5c]/13 bg-[#001f5c]/3 font-mono"
+        style={{ opacity: 0 }}
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />
+        <span className="text-[10.5px] text-[#001f5c]/55 tracking-[0.2em] uppercase">
+          what I do
+        </span>
       </div>
 
-      {/* Cards — 3 col then 2 centered */}
-      <div className="grid grid-cols-3 gap-5 max-md:grid-cols-1 max-lg:grid-cols-2">
-        {SERVICES.slice(0, 3).map((s, i) => <Card key={s.num} s={s} i={i} />)}
-      </div>
-      <div className="grid grid-cols-2 gap-5 mt-5 max-w-[730px] mx-auto max-md:grid-cols-1">
-        {SERVICES.slice(3).map((s, i) => <Card key={s.num} s={s} i={i + 3} />)}
-      </div>
+      <h2
+        ref={titleRef}
+        className="text-[#0a0f2c] font-black leading-none"
+        style={{
+          fontFamily: "'Syne',sans-serif",
+          fontSize: "clamp(1.9rem,4vw,2.8rem)",
+          letterSpacing: "-.025em",
+          opacity: 0,
+        }}
+      >
+        Services
+      </h2>
 
-      {/* Bottom strip */}
-      <div ref={stripRef}
-        className="mt-12 p-7 rounded-2xl border border-[#001f5c]/8 bg-[#001f5c]/3 flex items-center justify-between gap-6 flex-wrap"
-        style={{ opacity: 0 }}>
-        <div>
-          <p className="text-[#0a0f2c] font-bold text-[1rem] mb-1">Got a project in mind?</p>
-          <p className="text-[#0a0f2c]/45 text-[13px]">Available for freelance. Let's build something great.</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 transition-all duration-200 no-underline">
-            Contact Me
-          </a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-[13px] font-medium text-[#001f5c] border border-[#001f5c]/15 hover:bg-[#001f5c]/5 hover:-translate-y-0.5 transition-all duration-200 no-underline">
-            View Resume
-          </a>
-        </div>
-      </div>
+      <p
+        ref={subRef}
+        className="text-[#0a0f2c]/42 text-[13px] mt-2.5 max-w-full sm:max-w-sm"
+        style={{ opacity: 0 }}
+      >
+        From idea to deployed product — I handle the full stack.
+      </p>
+    </div>
 
-    </section>
+    {/* Button */}
+    <a
+      href="#contact"
+      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 no-underline w-full sm:w-auto"
+    >
+      Let's Work Together <ArrowRight size={13} />
+    </a>
+  </div>
+
+  {/* Cards */}
+  <div className="flex flex-col gap-5">
+
+    {/* Top Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+      {SERVICES.map((s, i) => (
+        <Card key={s.num} s={s} i={i} />
+      ))}
+    </div>
+
+
+  </div>
+
+  {/* Bottom strip */}
+  <div
+    ref={stripRef}
+    className="mt-10 md:mt-12 p-5 md:p-7 rounded-2xl border border-[#001f5c]/8 bg-[#001f5c]/3 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 md:gap-6"
+    style={{ opacity: 0 }}
+  >
+    <div>
+      <p className="text-[#0a0f2c] font-bold text-[0.95rem] md:text-[1rem] mb-1">
+        Got a project in mind?
+      </p>
+      <p className="text-[#0a0f2c]/45 text-[12.5px] md:text-[13px]">
+        Available for freelance. Let's build something great.
+      </p>
+    </div>
+
+    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+      <a
+        href="#contact"
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c] hover:-translate-y-0.5 transition-all duration-200 no-underline w-full sm:w-auto"
+      >
+        Contact Me
+      </a>
+
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-[13px] font-medium text-[#001f5c] border border-[#001f5c]/15 hover:bg-[#001f5c]/5 hover:-translate-y-0.5 transition-all duration-200 no-underline w-full sm:w-auto"
+      >
+        View Resume
+      </a>
+    </div>
+  </div>
+
+</section>
   );
 }

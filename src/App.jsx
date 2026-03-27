@@ -292,7 +292,7 @@ function PortfolioPage() {
             <Footer />
           </div>
         </>
-      )}d
+      )}
     </>
   );
 }

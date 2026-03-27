@@ -205,7 +205,6 @@ export default function Gateway() {
       {/* Three.js fixed bg */}
       <ThreeScene />
 
-      {/* Navy top bar */}
       <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#001f5c]" style={{ zIndex: 10 }} />
 
       {/* Page — scrollable, min full height */}
