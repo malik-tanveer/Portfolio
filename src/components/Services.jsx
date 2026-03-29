@@ -10,7 +10,7 @@ const SERVICES = [
     icon: Monitor,
     title: "Frontend Development",
     sub: "React · Next.js · Vue.js",
-    desc: "Fast, responsive, and animated UIs. I build interfaces that look great and feel smooth — pixel-perfect across every screen.",
+    desc: "Fast, responsive, and animated UIs. I build interfaces that look great and feel smooth pixel-perfect across every screen.",
     tags: ["React", "Next.js", "Vue.js", "Tailwind", "GSAP", "Three.js", "TypeScript"],
   },
   {
@@ -24,21 +24,21 @@ const SERVICES = [
     icon: Database,
     title: "Database Integration",
     sub: "MongoDB · Supabase · Firebase",
-    desc: "Schema design, queries, auth flows, and real-time data. I work with SQL and NoSQL — whatever your project needs.",
+    desc: "Schema design, queries, auth flows, and real-time data. I work with SQL and NoSQL whatever your project needs.",
     tags: ["MongoDB", "Supabase", "Firebase", "MySQL", "SQLite"],
   },
   {
     icon: Layers,
     title: "Full Stack & SaaS",
     sub: "MERN · Full Stack · End-to-End",
-    desc: "From idea to live product. Frontend, backend, database, deployment — one developer, complete ownership of the stack.",
+    desc: "From idea to live product. Frontend, backend, database, deployment one developer, complete ownership of the stack.",
     tags: ["MERN Stack", "Full Stack", "SaaS Apps", "Ecommerce", "Dashboards"],
   },
   {
     icon: Paintbrush,
     title: "UI/UX & Design",
     sub: "Figma · Design Systems · Animations",
-    desc: "Figma to code. Clean design systems, smooth animations, and interfaces users enjoy — not just use.",
+    desc: "Figma to code. Clean design systems, smooth animations, and interfaces users enjoy not just use.",
     tags: ["Figma", "Responsive Design", "GSAP Animations"],
   },
 ];
@@ -150,7 +150,7 @@ export default function Services() {
         className="text-[#0a0f2c]/42 text-[13px] mt-2.5 max-w-full sm:max-w-sm"
         style={{ opacity: 0 }}
       >
-        From idea to deployed product — I handle the full stack.
+        From idea to deployed product I handle the full stack.
       </p>
     </div>
 

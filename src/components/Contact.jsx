@@ -243,6 +243,9 @@ export default function Contact() {
         />
 
         {/* Message */}
+            <label className="text-[11px] font-mono text-[#0a0f2c]/40 uppercase">
+              Message
+            </label>
         <textarea
           name="message"
           value={fields.message}

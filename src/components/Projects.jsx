@@ -32,7 +32,7 @@ const PROJECTS = [
   },
   {
     id: 4, title: "VidSnap",
-    desc: "Full-stack video downloader — paste a URL and download from YouTube, Instagram, Facebook.",
+    desc: "Full-stack video downloader paste a URL and download from YouTube, Instagram, Facebook.",
     tags: ["Vue.js", "Vuetify", "Express.js", "yt-dlp"],
     img: "/yt-project.png",
     github: "https://github.com/malik-tanveer/yt-downloader",
@@ -72,7 +72,7 @@ const PROJECTS = [
   },
   {
     id: 9, title: "Portfolio",
-    desc: "This portfolio — Three.js 3D background, GSAP scroll animations, clean minimal design.",
+    desc: "This portfolio Three.js 3D background, GSAP scroll animations, clean minimal design.",
     tags: ["React", "Three.js", "GSAP", "Tailwind"],
     img: "",
     github: "https://github.com/malik-tanveer/Portfolio",

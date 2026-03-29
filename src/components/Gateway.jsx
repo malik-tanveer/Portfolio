@@ -219,7 +219,7 @@ export default function Gateway() {
           <div ref={tagRef} className="f-mono inline-flex items-center gap-2 mb-5 px-3.5 py-1.5 rounded-full"
             style={{ opacity: 0, border: "1px solid rgba(0,31,92,0.18)", background: "rgba(255,255,255,0.65)", backdropFilter: "blur(8px)" }}>
             <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />
-            <span className="text-[11px] text-[#001f5c]/65 tracking-[0.22em] uppercase">portfolio — {new Date().getFullYear()}</span>
+            <span className="text-[11px] text-[#001f5c]/65 tracking-[0.22em] uppercase">portfolio {new Date().getFullYear()}</span>
           </div>
 
           {/* Name */}

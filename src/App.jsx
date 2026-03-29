@@ -272,7 +272,7 @@ function PortfolioPage() {
       {!loading && (
         <>
           <PortfolioBg bgMode="light" />
-          <div ref={navRef} className="relative" style={{ zIndex: 50, opacity: 0 }}>
+          <div className="relative" style={{ zIndex: 50, }}>
             <Navbar />
           </div>
 
@@ -288,7 +288,7 @@ function PortfolioPage() {
             <section id="contact">    <Contact />    </section>
           </main>
 
-          <div className="relative" style={{ zIndex: 10 }}>
+          <div className="relative" style={{ zIndex: 50 }}>
             <Footer />
           </div>
         </>

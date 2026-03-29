@@ -41,7 +41,7 @@ export default function IdeaCTA() {
 
           <p className="cta-item text-[#0a0f2c]/55 max-w-[500px] text-[14px] leading-relaxed">
             I help turn ideas into fast, scalable, and real-world web applications.
-            From planning to deployment — everything handled.
+            From planning to deployment everything handled.
           </p>
 
           <a

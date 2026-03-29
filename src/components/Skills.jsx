@@ -192,7 +192,6 @@ export default function Skills() {
 
       </div>
 
-      {/* hover border + shadow via CSS var — only this needs style tag */}
       <style>{`
         .sk-card:hover { border-color: var(--ic) !important; box-shadow: 0 6px 24px color-mix(in srgb, var(--ic) 20%, transparent); }
         .sk-card:hover .w-11 { background: color-mix(in srgb, var(--ic) 18%, transparent) !important; }
