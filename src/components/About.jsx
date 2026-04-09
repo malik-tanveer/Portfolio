@@ -6,7 +6,7 @@ import { Download, ArrowRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { num: "12+", label: "Projects" },
+  { num: "6+", label: "Projects" },
   { num: "2+", label: "Internships" },
   { num: "1", label: "Years Exp" }
 ];

@@ -7,15 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
   {
-    id: 1, title: "EventFlow",
-    desc: "Manage and share events with authentication, RSVP, and real-time updates.",
-    tags: ["React", "TypeScript", "Supabase", "Tailwind"],
-    img: "/event-project.png",
-    github: "https://github.com/malik-tanveer/event-spark-80",
-    live: "https://event-spark-80.lovable.app",
-  },
-  {
-    id: 2, title: "Expense Tracker",
+    id: 1, title: "Expense Tracker",
     desc: "Track expenses, manage budgets, and visualize spending with a clean interface.",
     tags: ["React", "TypeScript", "Firebase", "Chart.js"],
     img: "/expense-project.png",
@@ -23,7 +15,7 @@ const PROJECTS = [
     live: "https://expense-tracker-b28ca.web.app/",
   },
   {
-    id: 3, title: "Freelance Manager",
+    id: 2, title: "Freelance Manager",
     desc: "Manage projects, clients, and payments with a clean dashboard interface.",
     tags: ["React", "TypeScript", "Firebase", "Firestore"],
     img: "/freelance-project.png",
@@ -31,15 +23,7 @@ const PROJECTS = [
     live: "https://freelance-project-manage-c1.web.app/",
   },
   {
-    id: 4, title: "VidSnap",
-    desc: "Full-stack video downloader paste a URL and download from YouTube, Instagram, Facebook.",
-    tags: ["Vue.js", "Vuetify", "Express.js", "yt-dlp"],
-    img: "/yt-project.png",
-    github: "https://github.com/malik-tanveer/yt-downloader",
-    live: "",
-  },
-  {
-    id: 5, title: "MT Quran",
+    id: 3, title: "MT Quran",
     desc: "Read Surahs, explore Paras, and check daily prayer times with a clean Quran API.",
     tags: ["React", "TypeScript", "Tailwind", "Quran API"],
     img: "/mt-quran.png",
@@ -47,64 +31,32 @@ const PROJECTS = [
     live: "https://web-ramdan.vercel.app/",
   },
   {
-    id: 6, title: "Movie App",
+    id: 4, title: "Movie App",
     desc: "Discover and search movies and dramas using the TMDB API.",
     tags: ["React", "TypeScript", "Tailwind", "TMDB API"],
     img: "/movie-project.png",
     github: "https://github.com/malik-tanveer/Movie",
     live: "https://movie-six-sand.vercel.app/",
   },
+{
+    id: 5, title: "CryptoView",
+    desc: "Crypto dashboard to track coin prices and market trends via CoinGecko API.",
+    tags: ["React", "JavaScript", "Tailwind", "CoinGecko API"],
+    img: "/crypto-project.png",
+    github: "https://github.com/malik-tanveer/CryptoView",
+    live: "https://crypto-8a576.web.app/",
+  },
   {
-    id: 7, title: "Apartment Website",
+    id: 6, title: "Apartment Website",
     desc: "Luxury apartment website with floor plans, amenities, and booking features.",
     tags: ["React", "Tailwind", "AOS", "EmailJS"],
     img: "/apartment-project.png",
     github: "https://github.com/malik-tanveer/Apartment-Website",
     live: "https://apartment-65b14.web.app/",
-  },
-  {
-    id: 8, title: "MT-Mart",
-    desc: "Full-stack ecommerce with product listings, cart, and Supabase backend.",
-    tags: ["React", "Tailwind", "Node.js", "Supabase"],
-    img: "",
-    github: "https://github.com/malik-tanveer/mt-mart",
-    live: "",
-  },
-  {
-    id: 9, title: "Portfolio",
-    desc: "This portfolio Three.js 3D background, GSAP scroll animations, clean minimal design.",
-    tags: ["React", "Three.js", "GSAP", "Tailwind"],
-    img: "/portfolio-project.png",
-    github: "https://github.com/malik-tanveer/Portfolio",
-    live: "https://tanveer-49ddc.web.app/",
-  },
-  {
-    id: 10, title: "Weather App",
-    desc: "Live weather dashboard with 7-day forecast and location search.",
-    tags: ["React", "TypeScript", "Tailwind", "OpenWeather API"],
-    img: "/weather-project.png",
-    github: "https://github.com/malik-tanveer/weather-app",
-    live: "https://weather-app-aykays.vercel.app/",
-  },
-  {
-    id: 11, title: "Trading Coins",
-    desc: "Crypto dashboard to track coin prices and market trends via CoinGecko API.",
-    tags: ["React", "TypeScript", "Tailwind", "CoinGecko API"],
-    img: "",
-    github: "https://github.com/malik-tanveer/CryptoView",
-    live: "https://crypto-view-ruddy.vercel.app/",
-  },
-  {
-    id: 12, title: "FutureStack",
-    desc: "Free project-based learning platform for full-stack, DSA, and Python automation.",
-    tags: ["React", "TypeScript", "Tailwind", "Express.js"],
-    img: "",
-    github: "https://github.com/malik-tanveer/MERN_Stack_Project",
-    live: "https://mern-stack-project-mu-three.vercel.app/",
-  },
+  }
 ];
 
-const INITIAL = 6;
+const INITIAL = 3;
 
 function Card({ p, i }) {
   const ref      = useRef(null);
