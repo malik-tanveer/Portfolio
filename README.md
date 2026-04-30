@@ -1,16 +1,104 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💼 Portfolio – Malik Tanveer
 
-Currently, two official plugins are available:
+🎯 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my personal developer portfolio website built using modern web technologies to showcase my skills, projects, and experience as a Full Stack Developer (MERN Stack).
 
-## React Compiler
+It focuses on interactive UI, smooth animations, and 3D web experiences.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌐 Live Website
+
+👉 https://tanveer49.web.app
+
+
+---
+
+⚙️ Tech Stack
+
+🖥️ Frontend
+
+React (Vite)
+
+Tailwind CSS
+
+JavaScript (ES6+)
+
+HTML5 & CSS3
+
+
+🎨 Animations & UI Experience
+
+GSAP (Advanced Animations)
+
+Three.js (3D Web Elements)
+
+
+🔥 Backend / Services
+
+Firebase Hosting
+
+EmailJS (Contact Form Messaging System)
+
+
+🛠️ Tools
+
+Vite
+
+Git & GitHub
+
+ESLint
+
+
+
+---
+
+🚀 Key Features
+
+🧑‍💻 Modern interactive portfolio design
+
+✨ Smooth animations using GSAP
+
+🌌 3D elements & effects using Three.js
+
+📂 Dynamic projects showcase section
+
+🧠 Skills & tech stack visualization
+
+📩 Contact form with real-time email sending via EmailJS
+
+⚡ Fast performance using Vite
+
+📱 Fully responsive (mobile + desktop)
+
+🌐 Deployed on Firebase Hosting
+
+
+
+---
+
+💡 Purpose
+
+This portfolio is designed to:
+
+Showcase real-world frontend + backend skills
+
+Demonstrate animation & 3D web experience
+
+Represent professional developer identity
+
+Support freelancing & job opportunities
+
+
+
+---
+
+🚀 Deployment
+
+Deployed using Firebase Hosting
+
+npm run build
+firebase deploy
