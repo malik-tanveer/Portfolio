@@ -107,7 +107,6 @@ function ThreeScene() {
     };
     window.addEventListener("mousemove", onMouse);
 
-    // ── Render loop ───────────────────────────────────────────────────────
     let raf;
     const clock = new THREE.Clock();
     const tick = () => {
@@ -191,9 +190,7 @@ export default function Gateway() {
         .f-syne { font-family:'Syne',sans-serif; }
         .f-dm   { font-family:'DM Sans',sans-serif; }
         .f-mono { font-family:'JetBrains Mono',monospace; }
-        .cursor::after { content:'|'; animation:blink .85s step-end infinite; color:#001f5c; }
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-        .card-p { border:1.5px solid rgba(0,0,0,0.08); background:rgba(255,255,255,0.88); backdrop-filter:blur(12px); transition:border-color .2s,box-shadow .2s; cursor:pointer; text-decoration:none; }
         .card-p:hover { border-color:#001f5c; box-shadow:0 10px 40px rgba(0,31,92,0.12),0 0 0 1px #001f5c; }
         .card-r { border:1.5px solid rgba(255,255,255,0.09); background:rgba(10,15,44,0.90); backdrop-filter:blur(12px); transition:border-color .2s,box-shadow .2s; cursor:pointer; text-decoration:none; }
         .card-r:hover { border-color:rgba(255,255,255,0.3); box-shadow:0 10px 40px rgba(0,0,0,0.3); }
@@ -237,7 +234,7 @@ export default function Gateway() {
           </p>
 
           {/* Cards */}
-          <div ref={cardsRef} className="cards flex gap-4 w-full" style={{ opacity: 0, perspective: "1100px" }}>
+          <div ref={cardsRef} className="cards w-full" style={{ opacity: 0, perspective: "1100px" }}>
 
             {/* Portfolio */}
             <TiltCard onClick={goPortfolio} className="card-p flex-1 flex flex-col items-start text-left p-6 rounded-2xl group">
@@ -254,25 +251,6 @@ export default function Gateway() {
                 Enter <span>→</span>
               </div>
             </TiltCard>
-
-            {/* Resume */}
-            <TiltCard href={RESUME_URL} className="card-r flex-1 flex flex-col items-start text-left p-6 rounded-2xl group">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                </svg>
-              </div>
-              <p className="f-mono text-[10px] text-white/30 tracking-[0.22em] uppercase mb-1">View / Download</p>
-              <p className="f-syne text-white text-xl font-bold mb-2">Resume</p>
-              <p className="f-dm text-white/40 text-sm leading-relaxed">One-page summary of my experience, skills & education.</p>
-              <div className="mt-5 flex items-center gap-2 f-mono text-[11px] text-white/52 font-medium tracking-wide group-hover:gap-3 transition-all duration-200">
-                Open PDF <span>↓</span>
-              </div>
-            </TiltCard>
-
           </div>
 
         </div>

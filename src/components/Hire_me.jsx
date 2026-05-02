@@ -133,16 +133,9 @@ export default function HireMe() {
               Contact Me
             </a>
 
-            <a
-              href="/resume.pdf"
-              className="w-full sm:w-auto inline-flex justify-center items-center px-6 py-3 rounded-xl border border-[#001f5c]/20 text-[#001f5c] hover:bg-[#001f5c]/5 transition"
-            >
-              View Resume
-            </a>
           </div>
         </div>
 
-        {/* ── RIGHT IMAGE ── */}
         <div
           ref={imgRef}
           className="flex-1 flex justify-center items-center"

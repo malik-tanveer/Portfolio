@@ -193,17 +193,10 @@ export default function About() {
 
             {/* Buttons */}
             <div ref={btnRef} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <a
-                href="/resume.pdf"
-                download
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c]"
-              >
-                <Download size={14} /> Download CV
-              </a>
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl text-[13px] font-medium text-[#001f5c] border border-[#001f5c]/14 hover:bg-[#001f5c]/5"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c]"
               >
                 Hire Me <ArrowRight size={13} />
               </a>
