@@ -163,7 +163,7 @@ export default function Gateway() {
   const wrapRef = useRef(null);
   const tagRef = useRef(null);
   const nameRef = useRef(null);
-  const aboutRef  = useRef(null);
+  const aboutRef = useRef(null);
   const roleRef = useRef(null);
   const cardsRef = useRef(null);
   const typedRole = useTyping("Full Stack MERN Developer", 1.1);
@@ -172,7 +172,7 @@ export default function Gateway() {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
     tl.fromTo(wrapRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 })
       .fromTo(tagRef.current, { y: -18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 0.4)
-      .fromTo(aboutRef.current, { y: 14, opacity: 0 },       { y: 0, opacity: 1, duration: 0.6 },              0.68)
+      .fromTo(aboutRef.current, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 0.68)
       .fromTo(nameRef.current, { y: 36, opacity: 0, skewY: 2 }, { y: 0, opacity: 1, skewY: 0, duration: 0.9 }, 0.52)
       .fromTo(roleRef.current, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, 0.72)
       .fromTo(cardsRef.current, { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, 0.9);
@@ -204,7 +204,6 @@ export default function Gateway() {
 
       <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#001f5c]" style={{ zIndex: 10 }} />
 
-      {/* Page — scrollable, min full height */}
       <div
         ref={wrapRef}
         className="f-dm relative flex flex-col items-center justify-center min-h-screen w-full px-5 py-20"
@@ -222,9 +221,9 @@ export default function Gateway() {
           {/* Name */}
           <h1 ref={nameRef} className="f-syne text-[#0a0f2c] font-black leading-[0.93] mb-3 select-none"
             style={{ fontSize: "clamp(2.8rem,9vw,5.2rem)", letterSpacing: "-0.025em", opacity: 0 }}>
-            Malik Tanveer
+            Tanveer
           </h1>
-   <p ref={aboutRef} className="f-dm text-[#0a0f2c]/52 text-sm leading-relaxed mb-6 max-w-md">
+          <p ref={aboutRef} className="f-dm text-[#0a0f2c]/52 text-sm leading-relaxed mb-6 max-w-md">
             A MERN Stack Developer who builds fast, scalable web apps  from clean React frontends to solid Node.js backends, with Firebase, REST APIs, and modern UI in between.
           </p>
           {/* Typing role */}
@@ -234,22 +233,68 @@ export default function Gateway() {
           </p>
 
           {/* Cards */}
-          <div ref={cardsRef} className="cards w-full" style={{ opacity: 0, perspective: "1100px" }}>
+          <div ref={cardsRef} className="cards w-full" style={{ opacity: 50, perspective: "1100px" }}>
 
             {/* Portfolio */}
-            <TiltCard onClick={goPortfolio} className="card-p flex-1 flex flex-col items-start text-left p-6 rounded-2xl group">
-              <div className="w-10 h-10 rounded-xl bg-[#001f5c] flex items-center justify-center mb-4">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" />
-                  <rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" />
+            <TiltCard
+              onClick={goPortfolio}
+              className="relative max-w-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 text-left cursor-pointer transition-all duration-500 group hover:-translate-y-2 hover:border-[#001f5c]/20"
+            >
+              {/* Top Right Arrow */}
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-all duration-300 group-hover:bg-[#001f5c] group-hover:rotate-45">
+                <span className="text-[#001f5c] group-hover:text-white text-lg">
+                  ↗
+                </span>
+              </div>
+
+              {/* Icon */}
+              <div className="w-8 h-8 rounded-2xl bg-[#001f5c] flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
                 </svg>
               </div>
-              <p className="f-mono text-[10px] text-[#001f5c]/40 tracking-[0.22em] uppercase mb-1">Explore</p>
-              <p className="f-syne text-[#0a0f2c] text-xl font-bold mb-2">Portfolio</p>
-              <p className="f-dm text-[#0a0f2c]/44 text-sm leading-relaxed">Projects, skills, experience & everything I've built.</p>
-              <div className="mt-5 flex items-center gap-2 f-mono text-[11px] text-[#001f5c] font-medium tracking-wide group-hover:gap-3 transition-all duration-200">
-                Enter <span>→</span>
+
+              {/* Label */}
+              <span className="inline-block rounded-full bg-[#001f5c]/10 px-3 py-1 text-[11px] font-semibold tracking-[0.15em] uppercase text-[#001f5c] mb-3">
+                Explore
+              </span>
+
+              {/* Title */}
+              <h3 className="f-syne text-xl font-bold text-[#0a0f2c] mb-2">
+                Portfolio
+              </h3>
+
+              {/* Description */}
+              <p className="f-dm text-sm leading-6 text-[#0a0f2c]/65">
+                Explore my projects, technical skills, real-world experience, and the
+                products I've designed & developed.
+              </p>
+
+              {/* Bottom CTA */}
+              <div className="mt-4 pt-3 flex items-center justify-between border-t border-slate-200">
+                <span className="text-sm font-semibold text-[#001f5c]">
+                  View Portfolio
+                </span>
+
+                <span className="text-xl transition-transform duration-300 group-hover:translate-x-2">
+                  →
+                </span>
               </div>
+
+              {/* Hover Glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#001f5c]/5 to-transparent pointer-events-none" />
             </TiltCard>
           </div>
 

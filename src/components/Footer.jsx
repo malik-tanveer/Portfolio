@@ -142,7 +142,7 @@ export default function Footer() {
           {/* Bottom */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-[#0a0f2c]/40 text-center sm:text-left">
             <p>© {year} tanveer.dev All rights reserved</p>
-            <p>Designed & Developed by Malik Tanveer</p>
+            <p>Designed & Developed by Tanveer</p>
           </div>
 
         </div>

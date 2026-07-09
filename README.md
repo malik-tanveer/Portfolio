@@ -1,5 +1,5 @@
 
-💼 Portfolio – Malik Tanveer
+💼 Portfolio  Tanveer
 
 🎯 Overview
 

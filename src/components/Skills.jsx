@@ -21,17 +21,13 @@ const SKILLS = [
   { name: "Python", slug: "python", color: "#3776ab" },
   { name: "PHP",         slug: "php",             color: "#777bb4" },
   { name: "Java",        slug: "openjdk",         color: "#437291" },
-  { name: "C",           slug: "c",               color: "#a8b9cc" },
-  { name: "C++",         slug: "cplusplus",       color: "#00599c" },
   { name: "MongoDB",     slug: "mongodb",         color: "#47a248" },
   { name: "MySQL",       slug: "mysql",           color: "#4479a1" },
   { name: "Firebase",    slug: "firebase",        color: "#ffca28" },
-  { name: "SQLite",      slug: "sqlite",          color: "#003b57" },
   { name: "Supabase",    slug: "supabase",        color: "#3ecf8e" },
   { name: "Docker",      slug: "docker",          color: "#2496ed" },
   { name: "Git",         slug: "git",             color: "#f05032" },
   { name: "GitHub",      slug: "github",          color: "#181717" },
-  { name: "Power BI",    slug: "powerbi",         color: "#f2c811" },
 ];
 
 function SkillsBg() {
@@ -131,7 +127,6 @@ export default function Skills() {
 
       <div className="relative z-10">
 
-        {/* Heading */}
         <div className="mb-8">
           <div ref={pillRef} className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full border border-[#001f5c]/13 bg-[#001f5c]/3 font-mono" style={{ opacity: 0 }}>
             <span className="w-1.5 h-1.5 rounded-full bg-[#001f5c] animate-pulse" />

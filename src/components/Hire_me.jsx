@@ -107,7 +107,7 @@ export default function HireMe() {
 
           {/* Description */}
           <p className="text-[#0a0f2c]/55 text-[13.5px] leading-relaxed mb-6 max-w-[480px]">
-            I'm <strong>Malik Tanveer</strong>, a developer focused on building modern web
+            I'm <strong>Tanveer</strong>, a developer focused on building modern web
             applications with clean UI, smooth user experience, and scalable architecture.
           </p>
 
@@ -143,7 +143,7 @@ export default function HireMe() {
           <div className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[380px] mx-auto">
             <img
               src="/unnamed.jpg"
-              alt="Malik Tanveer"
+              alt="Tanveer"
               className="w-full h-auto object-cover rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
               draggable={false}
             />

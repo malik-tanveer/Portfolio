@@ -96,7 +96,7 @@ export default function About() {
 
   <img
     src="/unnamed.jpg"
-    alt="Malik Tanveer"
+    alt="Tanveer"
     className="
       w-full 
       object-cover 
@@ -147,7 +147,7 @@ export default function About() {
                 opacity: 0,
               }}
             >
-              Malik Tanveer
+              Tanveer
             </h2>
 
             {/* Bio */}
@@ -156,7 +156,7 @@ export default function About() {
               className="leading-relaxed mb-6 text-[#0a0f2c]/52 max-w-full lg:max-w-[460px]"
               style={{ fontSize: "clamp(0.85rem,1.4vw,0.95rem)", opacity: 0 }}
             >
-              I’m Malik Tanveer, a MERN stack developer focused on building modern, responsive, and real-world web applications. I work with React, Next.js, Node.js, and databases like MongoDB and Supabase to create clean user interfaces and functional backend systems.
+              I’m Tanveer, a MERN stack developer focused on building modern, responsive, and real-world web applications. I work with React, Next.js, Node.js, and databases like MongoDB and Supabase to create clean user interfaces and functional backend systems.
             </p>
 
             {/* Chips */}

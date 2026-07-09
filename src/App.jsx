@@ -125,7 +125,6 @@ function PortfolioBg({ bgMode }) {
     };
     window.addEventListener("mousemove", onMouse);
 
-    // BG mode colors
     const BG_COLORS = {
       light: new THREE.Color(0xfafafa),
       warm: new THREE.Color(0xfdf6ee),

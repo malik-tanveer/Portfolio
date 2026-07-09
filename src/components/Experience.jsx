@@ -19,6 +19,13 @@ const DATA = [
     para: "Worked at Aykays Digital Agency as a Frontend Developer Intern. Built modern web interfaces using React, TypeScript, Firebase, and Tailwind CSS. Focused on responsive design, smooth user experience, and performance. Collaborated with the team, followed real-world workflows, and deployed projects on Vercel.",
   },
   {
+    company: "Velvettscents Brand",
+    role: "MERN & Frontend Developer",
+    period: "May 2026 – Present",
+    para: "NaN"
+    // para: "Working on personal projects across MERN stack and modern frontend technologies. Built apps like MT-Mart using React, Express.js, and Tailwind CSS. Also worked with Next.js, Vue.js, Three.js, and Chart.js focusing on responsive UI and real-world applications.",
+  },
+  {
     company: "Self Projects",
     role: "Full Stack & Frontend Developer",
     period: "Mar 2025 – Present",
@@ -48,7 +55,6 @@ function Card({ item, index }) {
 
   return (
     <div className={`flex flex-col md:flex-row items-start py-6 relative`}>
-      {/* DOT on line (desktop only) */}
       <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
         <div
           ref={dotRef}
