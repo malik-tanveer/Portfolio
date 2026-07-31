@@ -166,7 +166,7 @@ export default function Gateway() {
   const aboutRef = useRef(null);
   const roleRef = useRef(null);
   const cardsRef = useRef(null);
-  const typedRole = useTyping("Full Stack MERN Developer", 1.1);
+  const typedRole = useTyping("Full Stack MERN Developer & AI/ML Learner", 1.1);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -224,15 +224,17 @@ export default function Gateway() {
             Tanveer
           </h1>
           <p ref={aboutRef} className="f-dm text-[#0a0f2c]/52 text-sm leading-relaxed mb-6 max-w-md">
-            A MERN Stack Developer who builds fast, scalable web apps  from clean React frontends to solid Node.js backends, with Firebase, REST APIs, and modern UI in between.
+            A Full-Stack Developer and AI & ML enthusiast building modern, scalable digital solutions — combining React, Next.js, Node.js, Python, and Data Science to create fast web experiences and intelligent applications.
+
           </p>
+
           {/* Typing role */}
           <p ref={roleRef} className="f-mono text-[#001f5c]/52 mb-10 cursor"
             style={{ fontSize: "clamp(0.7rem,1.8vw,0.86rem)", letterSpacing: "0.06em", opacity: 0 }}>
             {typedRole}
           </p>
 
-          {/* Cards */}
+       
           <div ref={cardsRef} className="cards w-full" style={{ opacity: 50, perspective: "1100px" }}>
 
             {/* Portfolio */}
@@ -266,7 +268,7 @@ export default function Gateway() {
                 </svg>
               </div>
 
-              {/* Label */}
+             
               <span className="inline-block rounded-full bg-[#001f5c]/10 px-3 py-1 text-[11px] font-semibold tracking-[0.15em] uppercase text-[#001f5c] mb-3">
                 Explore
               </span>

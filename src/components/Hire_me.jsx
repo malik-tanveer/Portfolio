@@ -1,17 +1,45 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TrendingUp, ShieldCheck, Cpu, Rocket, Users } from "lucide-react";
+import {
+  TrendingUp,
+  Palette,
+  Gauge,
+  BrainCircuit,
+  Users,
+Rocket,
+Cpu,
+ShieldCheck,
+  Code2,
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const POINTS = [
-  { icon: TrendingUp, text: "Hands-on experience building real projects and solving practical challenges." },
-  { icon: ShieldCheck, text: "Strong understanding of responsive design, UI/UX best practices, and accessibility." },
-  { icon: Rocket, text: "Focused on performance with fast load times and smooth interactions." },
-  { icon: Users, text: "Collaborative, communicative, and reliable in team and client projects." },
-  { icon: Cpu, text: "Clean, maintainable code with scalable structure." },
-  { icon: ShieldCheck, text: "Capable of handling full-stack development." },
+  {
+    icon: TrendingUp,
+    text: "Hands-on experience building real-world web applications and solving practical problems."
+  },
+  {
+    icon: ShieldCheck,
+    text: "Strong focus on responsive UI, clean UX, accessibility, and modern web standards."
+  },
+  {
+    icon: Rocket,
+    text: "Performance-focused development with fast load times, smooth interactions, and scalable solutions."
+  },
+  {
+    icon: Cpu,
+    text: "Working with Python, NumPy, Pandas, and exploring AI & Machine Learning for data-driven solutions."
+  },
+  {
+    icon: Users,
+    text: "Collaborative and reliable when working on team projects, client requirements, and real-world products."
+  },
+  {
+    icon: ShieldCheck,
+    text: "Experienced across the full development process, from frontend interfaces to backend APIs and databases."
+  },
 ];
 
 export default function HireMe() {

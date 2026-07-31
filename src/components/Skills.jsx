@@ -18,16 +18,23 @@ const SKILLS = [
   { name: "Three.js",    slug: "threedotjs",      color: "#049ef4" },
   { name: "Node.js",     slug: "nodedotjs",       color: "#339933" },
   { name: "Express.js",  slug: "express",         color: "#404040" },
-  { name: "Python", slug: "python", color: "#3776ab" },
-  { name: "PHP",         slug: "php",             color: "#777bb4" },
-  { name: "Java",        slug: "openjdk",         color: "#437291" },
-  { name: "MongoDB",     slug: "mongodb",         color: "#47a248" },
-  { name: "MySQL",       slug: "mysql",           color: "#4479a1" },
-  { name: "Firebase",    slug: "firebase",        color: "#ffca28" },
-  { name: "Supabase",    slug: "supabase",        color: "#3ecf8e" },
-  { name: "Docker",      slug: "docker",          color: "#2496ed" },
-  { name: "Git",         slug: "git",             color: "#f05032" },
-  { name: "GitHub",      slug: "github",          color: "#181717" },
+
+  // Python & Data Science
+  { name: "Python",      slug: "python",           color: "#3776ab" },
+  { name: "NumPy",       slug: "numpy",            color: "#013243" },
+  { name: "Pandas",      slug: "pandas",           color: "#150458" },
+  { name: "Matplotlib",  slug: "matplotlib",       color: "#11557c" },
+  { name: "Scikit-learn",slug: "scikitlearn",      color: "#F7931E" },
+
+  { name: "PHP",         slug: "php",              color: "#777bb4" },
+  { name: "Java",        slug: "openjdk",          color: "#437291" },
+  { name: "MongoDB",     slug: "mongodb",          color: "#47a248" },
+  { name: "MySQL",       slug: "mysql",            color: "#4479a1" },
+  { name: "Firebase",    slug: "firebase",         color: "#ffca28" },
+  { name: "Supabase",    slug: "supabase",         color: "#3ecf8e" },
+  { name: "Docker",      slug: "docker",           color: "#2496ed" },
+  { name: "Git",         slug: "git",              color: "#f05032" },
+  { name: "GitHub",      slug: "github",           color: "#181717" },
 ];
 
 function SkillsBg() {

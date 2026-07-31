@@ -17,12 +17,18 @@ const TAGS = [
   "Node.js",
   "Express.js",
   "MongoDB",
-  "Supbase",
+  "Supabase",
   "TypeScript",
   "Tailwind CSS",
   "GSAP",
-  "Three.js"
+  "Three.js",
+  "Python",
+  "NumPy",
+  "Pandas",
+"ML"
 ];
+
+
 export default function About() {
   const secRef = useRef(null);
   const imgRef = useRef(null);
@@ -62,7 +68,6 @@ export default function About() {
 
   return (
     <>
-      {/* Only what Tailwind can't do */}
       <style>{`
     .ab-corner { position:absolute; width:26px; height:26px; border-color:#001f5c; border-style:solid; pointer-events:none; }
     .ab-corner-tl { top:-6px; left:-6px; border-width:2px 0 0 2px; border-radius:4px 0 0 0; }
@@ -72,7 +77,6 @@ export default function About() {
 
       <section ref={secRef} className="w-full px-5 py-10 md:py-14 max-w-[1100px] mx-auto">
 
-        {/* Pill */}
         <div
           ref={t1Ref}
           className="inline-flex items-center gap-2 mb-20 px-3 py-1.5 rounded-full border border-[#001f5c]/13 bg-[#001f5c]/3 font-mono"
@@ -85,7 +89,6 @@ export default function About() {
         </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12">
 
-          {/* Photo */}
           <div
   ref={imgRef}
   className="relative flex-shrink-0 mx-auto lg:mx-0 w-full max-w-[320px] lg:max-w-[340px]"
@@ -102,7 +105,6 @@ export default function About() {
       object-cover 
       shadow-xl 
       rounded-xl
-      
       h-[260px] 
       sm:h-[300px] 
       md:h-[340px] 
@@ -110,7 +112,6 @@ export default function About() {
     "
   />
 
-  {/* Status badge */}
   <div
     className="absolute left-3 bottom-3 flex items-center gap-2 px-3 py-1.5 rounded-full font-mono text-[10px]"
     style={{ background: "rgba(255,255,255,0.90)", border: "1px solid rgba(34,197,94,0.22)" }}
@@ -125,7 +126,6 @@ export default function About() {
   </div>
 </div>
 
-          {/* Divider (only desktop) */}
           <div
             ref={lineRef}
             className="hidden lg:block flex-shrink-0 self-stretch"
@@ -135,8 +135,6 @@ export default function About() {
           {/* Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
 
-
-            {/* Name */}
             <h2
               ref={t2Ref}
               className="text-[#0a0f2c] font-black leading-[0.92] mb-5"
@@ -156,10 +154,11 @@ export default function About() {
               className="leading-relaxed mb-6 text-[#0a0f2c]/52 max-w-full lg:max-w-[460px]"
               style={{ fontSize: "clamp(0.85rem,1.4vw,0.95rem)", opacity: 0 }}
             >
-              I’m Tanveer, a MERN stack developer focused on building modern, responsive, and real-world web applications. I work with React, Next.js, Node.js, and databases like MongoDB and Supabase to create clean user interfaces and functional backend systems.
+              I’m Tanveer, a Full-Stack Developer and AI & ML enthusiast passionate about building modern, responsive, and real-world digital solutions. I work with React, Next.js, Node.js, Python, NumPy, Pandas, MongoDB, and Supabase. From full-stack web development to AI, machine learning, and automation, I build practical solutions that turn ideas into impactful products.
+
             </p>
 
-            {/* Chips */}
+
             <div ref={tagsRef} className="flex flex-wrap justify-center lg:justify-start gap-2 mb-7">
               {TAGS.map(t => (
                 <span
@@ -171,7 +170,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Stats */}
             <div ref={stRef} className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
               {STATS.map((s, i) => (
                 <div key={s.label} className="flex items-center gap-6">
@@ -191,7 +189,7 @@ export default function About() {
               ))}
             </div>
 
-            {/* Buttons */}
+   
             <div ref={btnRef} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
 
               <a
