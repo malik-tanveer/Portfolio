@@ -297,7 +297,7 @@ function PortfolioPage() {
 }
 
 function ResumeRedirect() {
-  useEffect(() => { window.open("/resume.pdf", "_blank"); }, []);
+  useEffect(() => { window.open("/CV.pdf", "_blank"); }, []);
   return <Navigate to="/" replace />;
 }
 

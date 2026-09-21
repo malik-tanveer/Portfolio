@@ -269,7 +269,7 @@ export default function Services() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/CV.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-[13px] font-medium text-[#001f5c] border border-[#001f5c]/15 hover:bg-[#001f5c]/5 hover:-translate-y-0.5 transition-all duration-200 no-underline w-full sm:w-auto"

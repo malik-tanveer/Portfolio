@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import * as THREE from "three";
 
-const RESUME_URL = "/resume.pdf";
+const RESUME_URL = "/CV.pdf";
 
 function useTyping(text, delay = 1.2) {
   const [out, setOut] = useState("");
@@ -290,7 +290,7 @@ export default function Gateway() {
                 </span>
 
                 <span className="text-xl transition-transform duration-300 group-hover:translate-x-2">
-                  →
+                  → Click Here
                 </span>
               </div>
 
