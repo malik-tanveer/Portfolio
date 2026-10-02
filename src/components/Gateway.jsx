@@ -224,7 +224,7 @@ export default function Gateway() {
             Tanveer
           </h1>
           <p ref={aboutRef} className="f-dm text-[#0a0f2c]/52 text-sm leading-relaxed mb-6 max-w-md">
-            A Full-Stack Developer and AI & ML enthusiast building modern, scalable digital solutions — combining React, Next.js, Node.js, Python, and Data Science to create fast web experiences and intelligent applications.
+          I'm a Full-Stack Developer passionate about building modern web applications and exploring AI & Machine Learning. I work with React, Next.js, Node.js, and Python, while expanding my knowledge of Data Science to develop practical, user-focused digital solutions.
 
           </p>
 
@@ -280,8 +280,7 @@ export default function Gateway() {
 
               {/* Description */}
               <p className="f-dm text-sm leading-6 text-[#0a0f2c]/65">
-                Explore my projects, technical skills, real-world experience, and the
-                products I've designed & developed.
+                Explore my full-stack projects, AI & machine learning applications, technical skillss, and professional experience.
               </p>
 
               {/* Bottom CTA */}
