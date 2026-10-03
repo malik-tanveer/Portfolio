@@ -1,10 +1,4 @@
-import {
-  Github,
-  Linkedin,
-  Send,
-  Mail,
-  ArrowRight
-} from "lucide-react";
+import { Github, Linkedin, Send, Mail, ArrowRight } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -23,7 +17,7 @@ const SERVICES = [
   "Backend API Development",
   "Responsive UI Design",
   "AI & ML Solutions",
-  "Python & Data Science"
+  "Python & Data Science",
 ];
 
 export default function Footer() {
@@ -31,14 +25,10 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-20">
-
       <div className="h-[2px] w-full bg-[#001f5c]" />
 
       <div className="backdrop-blur-md bg-white/40 border-t border-[#001f5c]/10">
-
         <div className="max-w-[1100px] mx-auto px-5 py-14">
-
-
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5 mb-14 text-center sm:text-left">
             <div>
               <h3 className="text-[#0a0f2c] font-bold text-[18px] mb-1">
@@ -57,31 +47,40 @@ export default function Footer() {
             </a>
           </div>
 
-       
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-
-       
             <div className="max-w-[300px] mx-auto sm:mx-0 text-center sm:text-left">
-              <img src="/logo2.png" alt="logo" className="h-14 mb-5 mx-auto sm:mx-0" />
+              <img
+                src="/logo2.png"
+                alt="logo"
+                className="h-14 mb-5 mx-auto sm:mx-0"
+              />
 
               <p className="text-[#0a0f2c]/60 text-[13.5px] leading-relaxed mb-6">
-                I build modern, fast, and scalable web applications with clean UI,
-                smooth user experience, and real-world performance in mind.
+                I build modern full-stack web applications and explore AI &
+                machine learning to create practical, responsive, and
+                user-focused digital solutions.
               </p>
 
-            
               <div className="flex items-center justify-center sm:justify-start gap-2 text-[11px] text-[#001f5c]/70 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Available for freelance & collaborations
+                Available for freelance projects & collaborations
               </div>
 
-              
               <div className="flex flex-wrap justify-center sm:justify-start gap-3">
                 {[
-                  { icon: <Github size={16} />, link: "https://github.com/malik-tanveer" },
-                  { icon: <Linkedin size={16} />, link: "http://linkedin.com/in/malik-tanveer-8bbaa13b2/" },
+                  {
+                    icon: <Github size={16} />,
+                    link: "https://github.com/malik-tanveer",
+                  },
+                  {
+                    icon: <Linkedin size={16} />,
+                    link: "http://linkedin.com/in/malik-tanveer-8bbaa13b2/",
+                  },
                   { icon: <Send size={16} />, link: "https://t.me" },
-                  { icon: <Mail size={16} />, link: "mailto:mtanveerdev.33@gmail.com" },
+                  {
+                    icon: <Mail size={16} />,
+                    link: "mailto:mtanveerdev.33@gmail.com",
+                  },
                 ].map((s, i) => (
                   <a
                     key={i}
@@ -95,7 +94,6 @@ export default function Footer() {
               </div>
             </div>
 
-          
             <div className="text-center sm:text-left">
               <h4 className="text-[11px] uppercase tracking-[0.18em] text-[#0a0f2c]/40 mb-6">
                 Navigation
@@ -114,7 +112,6 @@ export default function Footer() {
               </div>
             </div>
 
-        
             <div className="text-center sm:text-left">
               <h4 className="text-[11px] uppercase tracking-[0.18em] text-[#0a0f2c]/40 mb-6">
                 Services
@@ -131,18 +128,14 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-
           </div>
 
-     
           <div className="h-px bg-[#001f5c]/10 my-6" />
 
-        
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-[#0a0f2c]/40 text-center sm:text-left">
             <p>© {year} tanveer.dev All rights reserved</p>
             <p>Designed & Developed by Tanveer</p>
           </div>
-
         </div>
       </div>
     </footer>

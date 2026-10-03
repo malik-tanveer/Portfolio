@@ -7,9 +7,10 @@ export default function IdeaCTA() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(".cta-item",
+      gsap.fromTo(
+        ".cta-item",
         { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out", stagger: 0.15 }
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out", stagger: 0.15 },
       );
     }, ref);
 
@@ -22,26 +23,26 @@ export default function IdeaCTA() {
       className="w-full px-5 py-20 flex justify-center items-center"
     >
       <div className="relative w-full max-w-[900px] rounded-3xl p-10 text-center overflow-hidden">
-
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center gap-6">
-
-          <h2 className="cta-item text-[#0a0f2c] font-black leading-tight"
+          <h2
+            className="cta-item text-[#0a0f2c] font-black leading-tight"
             style={{
               fontFamily: "'Syne',sans-serif",
               fontSize: "clamp(2rem,4vw,3rem)",
-              letterSpacing: "-.03em"
+              letterSpacing: "-.03em",
             }}
           >
-            Got an idea worth building? <br />
+            Have an idea to bring to life? <br />
             <span className="text-[#001f5c]">
-              Let’s turn it into something real.
+              Let’s build something meaningful.
             </span>
           </h2>
 
           <p className="cta-item text-[#0a0f2c]/55 max-w-[500px] text-[14px] leading-relaxed">
-            I help turn ideas into fast, scalable, and real-world web applications.
-            From planning to deployment everything handled.
+            From modern full-stack web applications to AI-powered solutions, I’m
+            passionate about turning ideas into practical digital experiences.
+            Let’s collaborate and build something useful together.
           </p>
 
           <a
@@ -50,7 +51,6 @@ export default function IdeaCTA() {
           >
             Start a Project <ArrowRight size={16} />
           </a>
-
         </div>
       </div>
     </section>

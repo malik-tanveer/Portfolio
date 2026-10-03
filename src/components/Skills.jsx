@@ -5,36 +5,56 @@ import * as THREE from "three";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const SKILLS = [
-  { name: "HTML5",       slug: "html5",          color: "#e34f26" },
-  { name: "CSS3",        slug: "css3",            color: "#1572b6" },
-  { name: "JavaScript",  slug: "javascript",      color: "#f7df1e" },
-  { name: "TypeScript",  slug: "typescript",      color: "#3178c6" },
-  { name: "React",       slug: "react",           color: "#61dafb" },
-  { name: "Next.js",     slug: "nextdotjs",       color: "#000000" },
-  { name: "Vue.js",      slug: "vuedotjs",        color: "#4FC08D" },
-  { name: "Tailwind",    slug: "tailwindcss",     color: "#06b6d4" },
-  { name: "GSAP",        slug: "greensock",       color: "#88ce02" },
-  { name: "Three.js",    slug: "threedotjs",      color: "#049ef4" },
-  { name: "Node.js",     slug: "nodedotjs",       color: "#339933" },
-  { name: "Express.js",  slug: "express",         color: "#404040" },
+  // Frontend Development
+  { name: "HTML5", slug: "html5", color: "#E34F26" },
+  { name: "CSS3", slug: "css3", color: "#1572b6" },
+  { name: "JavaScript", slug: "javascript", color: "#F7DF1E" },
+  { name: "TypeScript", slug: "typescript", color: "#3178C6" },
+  { name: "React", slug: "react", color: "#61DAFB" },
+  { name: "Next.js",slug: "nextdotjs",color: "#000000" },
+  { name: "Vue.js", slug: "vuedotjs", color: "#4FC08D" },
+  { name: "Vite", slug: "vite", color: "#646CFF" },
+  { name: "Tailwind CSS", slug: "tailwindcss", color: "#06B6D4" },
+  { name: "Bootstrap", slug: "bootstrap", color: "#7952B3" },
+  { name: "GSAP", slug: "greensock", color: "#88CE02" },
+  { name: "Three.js", slug: "threedotjs", color: "#049ef4" },
+
+  // Backend Development
+  { name: "Node.js", slug: "nodedotjs", color: "#339933" },
+  { name: "Express.js", slug: "express", color: "#404040" },
+  { name: "FastAPI", slug: "fastapi", color: "#009688" },
+
+  // Databases
+  { name: "MongoDB", slug: "mongodb", color: "#47A248" },
+  { name: "MySQL", slug: "mysql", color: "#4479A1" },
+  { name: "Firebase", slug: "firebase", color: "#FFCA28" },
+  { name: "Supabase", slug: "supabase", color: "#3ECF8E" },
 
   // Python & Data Science
-  { name: "Python",      slug: "python",           color: "#3776ab" },
-  { name: "NumPy",       slug: "numpy",            color: "#013243" },
-  { name: "Pandas",      slug: "pandas",           color: "#150458" },
-  { name: "Matplotlib",  slug: "matplotlib",       color: "#11557c" },
-  { name: "Scikit-learn",slug: "scikitlearn",      color: "#F7931E" },
+  { name: "Python", slug: "python", color: "#3776AB" },
+  { name: "NumPy", slug: "numpy", color: "#013243" },
+  { name: "Pandas", slug: "pandas", color: "#150458" },
+  { name: "Matplotlib", slug: "matplotlib", color: "#11557C" },
+  { name: "Scikit-learn", slug: "scikitlearn", color: "#F7931E" },
+  { name: "Jupyter", slug: "jupyter", color: "#F37626" },
 
-  { name: "PHP",         slug: "php",              color: "#777bb4" },
-  { name: "Java",        slug: "openjdk",          color: "#437291" },
-  { name: "MongoDB",     slug: "mongodb",          color: "#47a248" },
-  { name: "MySQL",       slug: "mysql",            color: "#4479a1" },
-  { name: "Firebase",    slug: "firebase",         color: "#ffca28" },
-  { name: "Supabase",    slug: "supabase",         color: "#3ecf8e" },
-  { name: "Docker",      slug: "docker",           color: "#2496ed" },
-  { name: "Git",         slug: "git",              color: "#f05032" },
-  { name: "GitHub",      slug: "github",           color: "#181717" },
+  // Machine Learning & Deep Learning
+  { name: "TensorFlow", slug: "tensorflow", color: "#FF6F00" },
+  { name: "Keras", slug: "keras", color: "#D00000" },
+  { name: "Streamlit", slug: "streamlit", color: "#FF4B4B" },
+  { name: "Gradio", slug: "gradio", color: "#F97316" },
+
+  // ML Platforms & Model APIs
+  { name: "Google Colab", slug: "googlecolab", color: "#F9AB00" },
+  { name: "Kaggle", slug: "kaggle", color: "#20BEFF" },
+  { name: "Hugging Face", slug: "huggingface", color: "#FFD21E" },
+
+  // API Testing & DevOps
+  { name: "Postman", slug: "postman", color: "#FF6C37" },
+  { name: "Git", slug: "git", color: "#F05032" },
+  { name: "GitHub", slug: "github", color: "#181717" },
 ];
 
 function SkillsBg() {

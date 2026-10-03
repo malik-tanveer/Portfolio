@@ -18,27 +18,27 @@ gsap.registerPlugin(ScrollTrigger);
 const POINTS = [
   {
     icon: TrendingUp,
-    text: "Hands-on experience building real-world web applications and solving practical problems."
+    text: "Hands-on experience building modern web applications through real-world projects and professional internship experience."
   },
   {
     icon: ShieldCheck,
-    text: "Strong focus on responsive UI, clean UX, accessibility, and modern web standards."
+    text: "Focused on responsive UI, clean user experiences, reusable React components, and modern web development practices."
   },
   {
     icon: Rocket,
-    text: "Performance-focused development with fast load times, smooth interactions, and scalable solutions."
+    text: "Building full-stack applications using React, Next.js, Node.js, Express.js, MongoDB, and REST APIs."
   },
   {
     icon: Cpu,
-    text: "Working with Python, NumPy, Pandas, and exploring AI & Machine Learning for data-driven solutions."
+    text: "Learning Machine Learning and Deep Learning with Python, NumPy, Pandas, Scikit-learn, and TensorFlow."
+  },
+  {
+    icon: TrendingUp,
+    text: "Exploring ML model deployment and interactive AI applications using Streamlit, FastAPI, and Gradio."
   },
   {
     icon: Users,
-    text: "Collaborative and reliable when working on team projects, client requirements, and real-world products."
-  },
-  {
-    icon: ShieldCheck,
-    text: "Experienced across the full development process, from frontend interfaces to backend APIs and databases."
+    text: "Experienced in collaborating on development projects, using Git/GitHub, and turning requirements into practical solutions."
   },
 ];
 

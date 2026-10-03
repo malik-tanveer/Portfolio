@@ -7,27 +7,43 @@ gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
   { num: "6+", label: "Projects" },
-  { num: "2+", label: "Internships" },
-  { num: "1", label: "Years Exp" }
+  { num: "3+", label: "Internships" },
+  { num: "1", label: "Years Exp" },
 ];
 
 const TAGS = [
+  // Full Stack Development
   "React",
   "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
   "Node.js",
   "Express.js",
   "MongoDB",
-  "Supabase",
-  "TypeScript",
-  "Tailwind CSS",
+  "REST APIs",
+  "Firebase",
+
+  // UI & 3D
   "GSAP",
   "Three.js",
+
+  // AI, ML & Data Science
   "Python",
   "NumPy",
   "Pandas",
-"ML"
-];
+  "Matplotlib",
+  "Scikit-learn",
+  "TensorFlow",
+  "Keras",
+  "Deep Learning",
+  "Machine Learning",
 
+  // ML Deployment & Tools
+  "Streamlit",
+  "FastAPI",
+  "Kaggle",
+  "Hugging Face",
+];
 
 export default function About() {
   const secRef = useRef(null);
@@ -43,25 +59,95 @@ export default function About() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(imgRef.current, {
-        yPercent: -8, ease: "none",
-        scrollTrigger: { trigger: secRef.current, start: "top bottom", end: "bottom top", scrub: 1.2 },
+        yPercent: -8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: secRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2,
+        },
       });
 
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: secRef.current, start: "top 78%", toggleActions: "play none none none" },
+        scrollTrigger: {
+          trigger: secRef.current,
+          start: "top 78%",
+          toggleActions: "play none none none",
+        },
         defaults: { ease: "power3.out" },
       });
 
-      tl.fromTo(imgRef.current, { x: -50, opacity: 0, scale: 0.96 }, { x: 0, opacity: 1, scale: 1, duration: 1 })
-        .fromTo(lineRef.current, { scaleY: 0, transformOrigin: "top" }, { scaleY: 1, duration: 0.8 }, "-=0.6")
-        .fromTo(t1Ref.current, { y: -16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 }, "-=0.5")
-        .fromTo(t2Ref.current, { y: 40, opacity: 0, skewY: 3 }, { y: 0, opacity: 1, skewY: 0, duration: 0.75 }, "-=0.35")
-        .fromTo(bioRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, "-=0.4")
-        .fromTo(tagsRef.current?.children ?? [], { y: 14, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, stagger: 0.05, duration: 0.38, ease: "back.out(1.6)" }, "-=0.35")
-        .fromTo(stRef.current?.children ?? [], { y: 16, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.45 }, "-=0.3")
-        .fromTo(btnRef.current?.children ?? [], { y: 14, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, stagger: 0.08, duration: 0.45, ease: "back.out(1.4)" }, "-=0.25");
+      tl.fromTo(
+        imgRef.current,
+        { x: -50, opacity: 0, scale: 0.96 },
+        { x: 0, opacity: 1, scale: 1, duration: 1 },
+      )
+        .fromTo(
+          lineRef.current,
+          { scaleY: 0, transformOrigin: "top" },
+          { scaleY: 1, duration: 0.8 },
+          "-=0.6",
+        )
+        .fromTo(
+          t1Ref.current,
+          { y: -16, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5 },
+          "-=0.5",
+        )
+        .fromTo(
+          t2Ref.current,
+          { y: 40, opacity: 0, skewY: 3 },
+          { y: 0, opacity: 1, skewY: 0, duration: 0.75 },
+          "-=0.35",
+        )
+        .fromTo(
+          bioRef.current,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6 },
+          "-=0.4",
+        )
+        .fromTo(
+          tagsRef.current?.children ?? [],
+          { y: 14, opacity: 0, scale: 0.9 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            stagger: 0.05,
+            duration: 0.38,
+            ease: "back.out(1.6)",
+          },
+          "-=0.35",
+        )
+        .fromTo(
+          stRef.current?.children ?? [],
+          { y: 16, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.1, duration: 0.45 },
+          "-=0.3",
+        )
+        .fromTo(
+          btnRef.current?.children ?? [],
+          { y: 14, opacity: 0, scale: 0.95 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            stagger: 0.08,
+            duration: 0.45,
+            ease: "back.out(1.4)",
+          },
+          "-=0.25",
+        );
 
-      gsap.to(imgRef.current, { y: -6, duration: 2.8, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.2 });
+      gsap.to(imgRef.current, {
+        y: -6,
+        duration: 2.8,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        delay: 1.2,
+      });
     }, secRef);
     return () => ctx.revert();
   }, []);
@@ -75,8 +161,10 @@ export default function About() {
     @keyframes abpulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4)} 50%{box-shadow:0 0 0 5px rgba(34,197,94,0)} }
   `}</style>
 
-      <section ref={secRef} className="w-full px-5 py-10 md:py-14 max-w-[1100px] mx-auto">
-
+      <section
+        ref={secRef}
+        className="w-full px-5 py-10 md:py-14 max-w-[1100px] mx-auto"
+      >
         <div
           ref={t1Ref}
           className="inline-flex items-center gap-2 mb-20 px-3 py-1.5 rounded-full border border-[#001f5c]/13 bg-[#001f5c]/3 font-mono"
@@ -88,19 +176,18 @@ export default function About() {
           </span>
         </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12">
-
           <div
-  ref={imgRef}
-  className="relative flex-shrink-0 mx-auto lg:mx-0 w-full max-w-[320px] lg:max-w-[340px]"
-  style={{ opacity: 0 }}
->
-  <div className="ab-corner ab-corner-tl" />
-  <div className="ab-corner ab-corner-br" />
+            ref={imgRef}
+            className="relative flex-shrink-0 mx-auto lg:mx-0 w-full max-w-[320px] lg:max-w-[340px]"
+            style={{ opacity: 0 }}
+          >
+            <div className="ab-corner ab-corner-tl" />
+            <div className="ab-corner ab-corner-br" />
 
-  <img
-    src="/unnamed.jpg"
-    alt="Tanveer"
-    className="
+            <img
+              src="/unnamed.jpg"
+              alt="Tanveer"
+              className="
       w-full 
       object-cover 
       shadow-xl 
@@ -110,21 +197,24 @@ export default function About() {
       md:h-[340px] 
       lg:h-[420px]
     "
-  />
+            />
 
-  <div
-    className="absolute left-3 bottom-3 flex items-center gap-2 px-3 py-1.5 rounded-full font-mono text-[10px]"
-    style={{ background: "rgba(255,255,255,0.90)", border: "1px solid rgba(34,197,94,0.22)" }}
-  >
-    <span
-      className="w-1.5 h-1.5 rounded-full bg-green-500"
-      style={{ animation: "abpulse 2s ease-in-out infinite" }}
-    />
-    <span className="text-green-700 tracking-[0.15em] uppercase">
-      Available
-    </span>
-  </div>
-</div>
+            <div
+              className="absolute left-3 bottom-3 flex items-center gap-2 px-3 py-1.5 rounded-full font-mono text-[10px]"
+              style={{
+                background: "rgba(255,255,255,0.90)",
+                border: "1px solid rgba(34,197,94,0.22)",
+              }}
+            >
+              <span
+                className="w-1.5 h-1.5 rounded-full bg-green-500"
+                style={{ animation: "abpulse 2s ease-in-out infinite" }}
+              />
+              <span className="text-green-700 tracking-[0.15em] uppercase">
+                Available
+              </span>
+            </div>
+          </div>
 
           <div
             ref={lineRef}
@@ -134,7 +224,6 @@ export default function About() {
 
           {/* Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
-
             <h2
               ref={t2Ref}
               className="text-[#0a0f2c] font-black leading-[0.92] mb-5"
@@ -154,13 +243,23 @@ export default function About() {
               className="leading-relaxed mb-6 text-[#0a0f2c]/52 max-w-full lg:max-w-[460px]"
               style={{ fontSize: "clamp(0.85rem,1.4vw,0.95rem)", opacity: 0 }}
             >
-              I’m Tanveer, a Full-Stack Developer and AI & ML enthusiast passionate about building modern, responsive, and real-world digital solutions. I work with React, Next.js, Node.js, Python, NumPy, Pandas, MongoDB, and Supabase. From full-stack web development to AI, machine learning, and automation, I build practical solutions that turn ideas into impactful products.
-
+              I’m Tanveer, a Full-Stack Developer and AI & ML enthusiast
+              passionate about building modern web applications and intelligent
+              solutions. I work with the MERN stack, React, Next.js, Node.js,
+              Express.js, and MongoDB to develop responsive, user-friendly
+              digital experiences. Alongside web development, I’m learning
+              Machine Learning and Deep Learning using Python, NumPy, Pandas,
+              Scikit-learn, and TensorFlow. I also build and deploy interactive
+              ML applications using Streamlit and FastAPI. My goal is to combine
+              full-stack development and AI to create practical, impactful
+              solutions.
             </p>
 
-
-            <div ref={tagsRef} className="flex flex-wrap justify-center lg:justify-start gap-2 mb-7">
-              {TAGS.map(t => (
+            <div
+              ref={tagsRef}
+              className="flex flex-wrap justify-center lg:justify-start gap-2 mb-7"
+            >
+              {TAGS.map((t) => (
                 <span
                   key={t}
                   className="text-[10.5px] px-3 py-1 rounded-full border border-[#001f5c]/10 bg-[#001f5c]/3 text-[#0a0f2c]/48 hover:bg-[#001f5c]/7 hover:border-[#001f5c]/22 hover:text-[#001f5c] transition-all duration-200"
@@ -170,11 +269,17 @@ export default function About() {
               ))}
             </div>
 
-            <div ref={stRef} className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
+            <div
+              ref={stRef}
+              className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8"
+            >
               {STATS.map((s, i) => (
                 <div key={s.label} className="flex items-center gap-6">
                   <div>
-                    <div className="font-bold text-[#0a0f2c]" style={{ fontSize: "1.25rem" }}>
+                    <div
+                      className="font-bold text-[#0a0f2c]"
+                      style={{ fontSize: "1.25rem" }}
+                    >
                       {s.num}
                     </div>
                     <div className="text-[9px] uppercase mt-1 text-[#0a0f2c]/32 font-mono">
@@ -189,9 +294,10 @@ export default function About() {
               ))}
             </div>
 
-   
-            <div ref={btnRef} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-
+            <div
+              ref={btnRef}
+              className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
+            >
               <a
                 href="#contact"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl text-[13px] font-semibold bg-[#0a0f2c] text-white hover:bg-[#001f5c]"
@@ -199,7 +305,6 @@ export default function About() {
                 Hire Me <ArrowRight size={13} />
               </a>
             </div>
-
           </div>
         </div>
       </section>
